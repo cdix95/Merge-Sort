@@ -7,48 +7,49 @@ using namespace std;
 void msort(int a[], int x[], int s, int e) {
     int m=(s+e)/2;
     if(e-s<1)return;
-    msort(a,x,s,m);
-    msort(a,x,m+1,e);
+    msort(a, x, s, m);
+    msort(a, x, m+1, e);
     int i=s,j=m+1,k=0;
-    while(i<=m && j<=e){
-        if(a[i]<a[j]){
-            x[k]=a[i];
+    while(i <= m && j <= e){
+        if(a[i] < a[j]){
+            x[k] = a[i];
             i++;
             k++;
         }
         else{
-            x[k]=a[j];
+            x[k] = a[j];
             j++;
             k++;
         }
     }
 	
-    while(i<=m){
-        x[k]=a[i];
+    while(i <= m){
+        x[k] = a[i];
         i++;
         k++;
     }
 	
-    while(j<=e){
-        x[k]=a[j];
+    while(j <= e){
+        x[k] = a[j];
         j++;
         k++;
     }
 	
-    for(int i=s;i<=e;i++){
-        a[i]=x[i-s];
+    for(int i=s; i<=e; i++){
+        a[i] = x[i-s];
     }
 }
 
 void mergesort(int a[], int n) {
-    int *x=new int[n];
-    msort(a,x,0,n-1);
+    int *x = new int[n];
+    msort(a, x, 0, n-1);
     delete[] x;
 }
 
 bool sorted(int a[], int n) {
 	for (int i = 0; i < n - 1; ++i) {
-            if (a[i] > a[i + 1])return false;
+            if (a[i] > a[i + 1]) 
+		    return false;
 	}
 	return true;
 }
