@@ -22,16 +22,19 @@ void msort(int a[], int x[], int s, int e) {
             k++;
         }
     }
+	
     while(i<=m){
         x[k]=a[i];
         i++;
         k++;
     }
+	
     while(j<=e){
         x[k]=a[j];
         j++;
         k++;
     }
+	
     for(int i=s;i<=e;i++){
         a[i]=x[i-s];
     }
