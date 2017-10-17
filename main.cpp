@@ -67,6 +67,10 @@ int main(int argc, char * args[]) {
 	int c[] = { 2 };
 	mergesort(c, 1);
 	assert(sorted(c, 1));
+	
+	int z[0];
+	mergesort(z, 0);
+	assert(sorted(z, 0));
 
 	int d[] = { 43, 7, -46, 57, 11 };
 	mergesort(d, 5);
