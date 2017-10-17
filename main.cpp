@@ -64,9 +64,9 @@ int main(int argc, char * args[]) {
 	mergesort(b, 1001);
 	assert(sorted(b, 1001));
 
-	int c[] = { 7 };
-	mergesort(c, 6);
-	assert(sorted(c, 6));
+	int c[] = { 2 };
+	mergesort(c, 1);
+	assert(sorted(c, 1));
 
 	int d[] = { 43, 7, -46, 57, 11 };
 	mergesort(d, 5);
