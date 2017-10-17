@@ -3,8 +3,7 @@
 
 using namespace std;
 
-// s = start of range to sort
-// e = end of range to sort
+
 void msort(int a[], int x[], int s, int e) {
     int m=(s+e)/2;
     if(e-s<1)return;
@@ -56,16 +55,20 @@ int main(int argc, char * args[]) {
 	for (int i = 0; i < 1000; ++i) a[i] = rand() % 100;
 	mergesort(a, 1000);
 	assert(sorted(a, 1000));
+
 	int b[1001];
 	for (int i = 0; i < 1001; ++i) b[i] = -50 + rand() % 100;
 	mergesort(b, 1001);
 	assert(sorted(b, 1001));
-	int c[] = { 2 };
+
+	int c[] = { 7 };
 	mergesort(c, 1);
 	assert(sorted(c, 1));
-	int d[] = { 1, 2, 3, 4, 5 };
+
+	int d[] = { 43, 7, -46, 57, 11 };
 	mergesort(d, 5);
 	assert(sorted(d, 5));
-
+	
+    
 	cout << "All tests passed." << endl;	
 }
