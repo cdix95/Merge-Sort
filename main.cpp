@@ -9,7 +9,7 @@ void msort(int a[], int x[], int s, int e) {
     if(e-s<1)return;
     msort(a, x, s, m);
     msort(a, x, m+1, e);
-    int i=s,j=m+1,k=0;
+    int i = s, j = m+1, k = 0;
     while(i <= m && j <= e){
         if(a[i] < a[j]){
             x[k] = a[i];
